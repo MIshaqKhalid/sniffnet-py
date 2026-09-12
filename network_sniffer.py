@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-CodeAlpha Internship — Task 1: Basic Network Sniffer
+SniffNet — Basic Network Sniffer
 Author   : Ishaq
 Purpose  : Capture & analyze network packets (scapy preferred, raw-socket fallback)
 Usage    : sudo python3 network_sniffer.py [-i INTERFACE] [-c COUNT] [-f FILTER]
@@ -23,10 +23,10 @@ R = "\033[91m"; G = "\033[92m"; Y = "\033[93m"; B = "\033[94m"
 M = "\033[95m"; C = "\033[96m"; W = "\033[97m"; BOLD = "\033[1m"; X = "\033[0m"
 
 BANNER = f"""{C}{BOLD}
- ╔═╗╔═╗╔╦╗╔═╗╔═╗╦  ╔═╗╦ ╦╔═╗  ╔╗╔╔═╗╔╦╗  ╔═╗╔╗╔╦╔═╗╔═╗╔═╗╦═╗
- ║  ║ ║ ║║║╣ ╠═╣║  ╠═╝╠═╣╠═╣  ║║║║╣  ║   ╚═╗║║║║╠╣ ╠╣ ║╣ ╠╦╝
- ╚═╝╚═╝═╩╝╚═╝╩ ╩╩═╝╩  ╩ ╩╩ ╩  ╝╚╝╚═╝ ╩   ╚═╝╝╚╝╩╚  ╚  ╚═╝╩╚═
-{X}{G}            CodeAlpha Internship — Task 1: Network Sniffer{X}
+ ╔═╗╔╗╔╦╔═╗╔═╗╔╗╔╔═╗╔╦╗
+ ╚═╗║║║║╠╣ ╠╣ ║║║║╣  ║
+ ╚═╝╝╚╝╩╚  ╚  ╝╚╝╚═╝ ╩
+{X}{G}            Terminal Packet Sniffer & Traffic Analyzer{X}
 {Y}                    Developed by Ishaq | Ethical Use Only{X}
 """
 
@@ -176,7 +176,7 @@ def raw_sniffer(count=50):
 # ── Entry ─────────────────────────────────────────────────────────────────────
 def main():
     import argparse
-    p = argparse.ArgumentParser(description="CodeAlpha Task 1 — Network Sniffer")
+    p = argparse.ArgumentParser(description="SniffNet — Network Sniffer")
     p.add_argument("-i", "--interface", help="Interface to sniff on (e.g. eth0)")
     p.add_argument("-c", "--count",     type=int, default=0,  help="Packet count (0=unlimited)")
     p.add_argument("-f", "--filter",    default="",            help="BPF filter (e.g. 'tcp port 80')")
